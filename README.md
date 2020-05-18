@@ -45,7 +45,7 @@ ASP.NET , AutoMapper , Bootstrap , MVC pattern , NLog
 ## Task 2
 > -  ### Social Network
 > -  **Deadline:** Apr 18, 2020
-> -  **Uploading date:** 
+> -  **Uploading date:** Apr 18, 2020
 > -  **Link:** <...>
 
 > -  **Database:** [Neo4j](https://neo4j.com/) 
@@ -53,4 +53,6 @@ ASP.NET , AutoMapper , Bootstrap , MVC pattern , NLog
 
 > -  **About:** 
 In this task I need to work with the database Neo4j. I should create adding leyers over my project (Task 1) and show for my artist common friends.
+
+> - **Main files:** I add [Social.cs](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/Social.cs),[NetworkManagment.cs](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/NetworkManagment.cs) and [FraudDetaction.cs](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/FraudDetaction.cs) files which i try to understand and find [tutorial Test-Drive Neo4j with Cypher] (https://neo4j.com/developer/#cs-1). Also I create sone Neo4j queries for Artist - [ArtistNeo4j.txt](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/ArtistNeo4j.txt)
 
