@@ -1,0 +1,186 @@
+use mykunst 
+
+------------------------------------ARTISTS------------------------------------
+
+
+db.artist.insert({
+	"_id":{"$oid":"5e64f393d6d5b431885711c0"},
+	"name":"Edvard Munch",
+	"nickname":"Edvard_M",
+	"email":"edvard_m@gmail.com",
+	"password":"1",
+	"avatar":"https://uploads7.wikiart.org/images/edvard-munch/self-portrait-i-1896.jpg!Portrait.jpg",
+	"followers":[]
+})
+db.artist.insert({
+	"_id":{"$oid":"5e64f393d6d5b431885711c1"},
+	"name":"Josef Albers",
+	"nickname":"Josef_A",
+	"email":"josef_a@gmail.com",
+	"password":"1",
+	"avatar":"https://uploads4.wikiart.org/temp/cf0acabe-15ec-4ee2-8f12-f7c47929a28c.jpg",
+	"followers":[{"name":"Edvard Munch","nickname":"Edvard_M","email":"edvard_m@gmail.com",
+	"avatar":"https://uploads7.wikiart.org/images/edvard-munch/self-portrait-i-1896.jpg!Portrait.jpg"}]
+})
+db.artist.insert({
+	"_id":{"$oid":"5e64f393d6d5b431885711c2"},
+	"name":"Vincent van Gogh",
+	"nickname":"Gogh_V",
+	"email":"gogh_v@gmail.com",
+	"password":"1",
+	"avatar":"https://uploads8.wikiart.org/images/vincent-van-gogh.jpg!Portrait.jpg",
+	"followers":["name":"Edvard Munch","nickname":"Edvard_M","email":"edvard_m@gmail.com","avatar":"https://uploads7.wikiart.org/images/edvard-munch/self-portrait-i-1896.jpg!Portrait.jpg"]
+})
+db.artist.insert({
+	"_id":{"$oid":"5e64f393d6d5b431885711c3"},
+	"name":"Egon Schiele",
+	"nickname":"Egon_Sh",
+	"email":"egon_sh@gmail.com",
+	"password":"1",
+	"avatar":"https://uploads4.wikiart.org/images/egon-schiele.jpg!Portrait.jpg",
+	"followers":[]
+})
+db.artist.insert({
+	"_id":{"$oid":"5e64f393d6d5b431885711c4"},
+	"name":"Gustav Klimt",
+	"nickname":"Gustav_K",
+	"email":"gustav_k@gmail.com",
+	"password":"1",
+	"avatar":"https://uploads4.wikiart.org/images/gustav-klimt.jpg!Portrait.jpg",
+	"followers":["name":"Edvard Munch","nickname":"Edvard_M","email":"edvard_m@gmail.com","avatar":"https://uploads7.wikiart.org/images/edvard-munch/self-portrait-i-1896.jpg!Portrait.jpg"]
+})
+
+
+
+------------------------------------POSTS------------------------------------
+
+
+
+db.post.insert({
+	"_id":{"$oid":"5e64f3b8d6d5b431885711c6"},
+	"authorEmail":"gogh_v@gmail.com",
+	"authorName":"Vincent van Gogh",
+	"authorNickname":"Gogh_V",
+	"time":"2020-02-09T03:43:00.000+08:00",
+	"authorAvatar":"https://uploads8.wikiart.org/images/vincent-van-gogh.jpg!Portrait.jpg",
+	"text":"it is rain",
+	"reactions":[],
+	"views":{"$numberInt":"0"},
+	"comments":[{"_id":{"$oid":"5e64f3b8d6d5b431885711c5"},"authorEmail":"gustav_k@gmail.com","authorName":"Gustav Klimt","authorNickname":"Gustav_K","time":"2020-02-06T03:30:00.000+09:00","authorAvatar":"https://uploads4.wikiart.org/images/gustav-klimt.jpg!Portrait.jpg","text":"wow"}]
+})
+
+db.post.insert({
+	"_id":{"$oid":"5e64f3b8d6d5b431885711c7"},
+	"authorEmail":"gogh_v@gmail.com",
+	"authorName":"Vincent van Gogh",
+	"authorNickname":"Gogh_V",
+	"time":"2020-02-09T03:51:00.000+08:00",
+	"authorAvatar":"https://uploads8.wikiart.org/images/vincent-van-gogh.jpg!Portrait.jpg",
+	"text":"i feel bad",
+	"reactions":[],
+	"views":{"$numberInt":"0"},
+	"comments":[{"_id":{"$oid":"5e64f3b8d6d5b431885711c5"},"authorEmail":"gustav_k@gmail.com","authorName":"Gustav Klimt","authorNickname":"Gustav_K","time":"2020-02-06T03:53:00.000+09:00","authorAvatar":"https://uploads4.wikiart.org/images/gustav-klimt.jpg!Portrait.jpg","text":"not be so sad"}]
+})
+
+db.post.insert({
+	"_id":{"$oid":"5e64f3b8d6d5b431885711c8"},
+	"authorEmail":"gustav_k@gmail.com",
+	"authorName":"Gustav Klimt",
+	"authorNickname":"Gustav_K",
+	"time":"2020-03-06T03:45:00.000+06:00",
+	"authorAvatar":"https://uploads4.wikiart.org/images/gustav-klimt.jpg!Portrait.jpg",
+	"text":"hello, dear",
+	"reactions":[{"email":"egon_sh@gmail.com"},{"email":"gogh_v@gmail.com"}],
+	"views":{"$numberInt":"3"},
+	"comments":[{"authorEmail":"egon_sh@gmail.com","authorName":"Egon Schiele","authorNickname":"Egon_Sh","authorAvatar":"https://uploads4.wikiart.org/images/egon-schiele.jpg!Portrait.jpg","text":"hi","times":"2020-04-06T03:45:00.000+07:00"},
+		{"authorEmail":"egon_sh@gmail.com","authorName":"Egon Schiele","authorSurname":"Egon_Sh","authorAvatar":"https://uploads4.wikiart.org/images/egon-schiele.jpg!Portrait.jpg","text":"i see your last work, they are magic","time":"2020-04-06T03:46:00.000+07:00"}]
+})
+db.post.insert({
+	"_id":{"$oid":"5e64f3b8d6d5b431885711c9"},
+	"authorEmail":"gustav_k@gmail.com",
+	"authorName":"Gustav Klimt",
+	"authorNickname":"Gustav_K",
+	"time":"2020-03-06T03:45:00.000+06:00",
+	"authorAvatar":"https://uploads4.wikiart.org/images/gustav-klimt.jpg!Portrait.jpg",
+	"text":"i`m feel better today",
+	"reactions":[{"email":"egon_sh@gmail.com"},{"email":"gogh_v@gmail.com"}],
+	"views":{"$numberInt":"3"},
+	"comments":[{"authorEmail":"egon_sh@gmail.com","authorName":"Egon Schiele","authorNickname":"Egon_Sh","authorAvatar":"https://uploads4.wikiart.org/images/egon-schiele.jpg!Portrait.jpg","text":"it is great","times":"2020-04-06T03:45:00.000+07:00"},
+		{"authorEmail":"egon_sh@gmail.com","authorName":"Egon Schiele","authorSurname":"Egon_Sh","authorAvatar":"https://uploads4.wikiart.org/images/egon-schiele.jpg!Portrait.jpg","text":"i like to heart it","time":"2020-04-06T03:46:00.000+07:00"}]
+})
+db.post.insert({
+	"_id":{"$oid":"5e64f3b8d6d5b431885719c0"},
+	"authorEmail":"egon_sh@gmail.com",
+	"authorName":"Egon Schiele",
+	"authorNickname":"Egon_Sh",
+	"time":"2020-04-06T03:45:00.000+06:00",
+	"authorAvatar":"https://uploads4.wikiart.org/images/egon-schiele.jpg!Portrait.jpg",
+	"text":"today is the best for walking",
+	"reactions":[{"email":"gustav_k@gmail.com"},{"email":"gogh_v@gmail.com"}],
+	"views":{"$numberInt":"2"},
+	"comments":[{"_id":{"$oid":"5e64f3b8d6d5b431885711c5"},"authorEmail":"gustav_k@gmail.com","authorName":"Gustav Klimt","authorNickname":"Gustav_K","time":"2020-04-06T03:45:00.000+07:00","authorAvatar":"https://uploads4.wikiart.org/images/gustav-klimt.jpg!Portrait.jpg","text":"i agree"}]
+})
+db.post.insert({
+	"_id":{"$oid":"5e64f3b8d6d5b431885718c0"},
+	"authorEmail":"egon_sh@gmail.com",
+	"authorName":"Egon Schiele",
+	"authorNickname":"Egon_Sh",
+	"time":"2020-04-06T03:49:00.000+06:00",
+	"authorAvatar":"https://uploads4.wikiart.org/images/egon-schiele.jpg!Portrait.jpg",
+	"text":"how are you",
+	"reactions":[{"email":"gustav_k@gmail.com"},{"email":"gogh_v@gmail.com"}],
+	"views":{"$numberInt":"2"},
+	"comments":[{"_id":{"$oid":"5e64f3b8d6d5b431885711c5"},"authorEmail":"gustav_k@gmail.com","authorName":"Gustav Klimt","authorNickname":"Gustav_K","time":"2020-04-06T03:50:00.000+07:00","authorAvatar":"https://uploads4.wikiart.org/images/gustav-klimt.jpg!Portrait.jpg","text":"i m fine"}]
+})
+db.post.insert({
+	"_id":{"$oid":"5e64f3b8d6d5b431885717c0"},
+	"authorEmail":"edvard_m@gmail.com",
+	"authorName":"Edvard Munch",
+	"authorNickname":"Edvard_M",
+	"time":"2020-04-06T03:49:00.000+08:00",
+	"authorAvatar":"https://uploads7.wikiart.org/images/edvard-munch/self-portrait-i-1896.jpg!Portrait.jpg",
+	"text":"i complete my work",
+	"reactions":[],
+	"views":{"$numberInt":"0"},
+	"comments":[{"_id":{"$oid":"5e64f3b8d6d5b431885711c5"},"authorEmail":"gustav_k@gmail.com","authorName":"Gustav Klimt","authorNickname":"Gustav_K","time":"2020-04-06T03:50:00.000+08:00","authorAvatar":"https://uploads4.wikiart.org/images/gustav-klimt.jpg!Portrait.jpg","text":"wooow"}]
+})
+
+db.post.insert({
+	"_id":{"$oid":"5e64f3b8d6d5b431885716c0"},
+	"authorEmail":"edvard_m@gmail.com",
+	"authorName":"Edvard Munch",
+	"authorNickname":"Edvard_M",
+	"time":"2020-04-08T03:49:00.000+08:00",
+	"authorAvatar":"https://uploads7.wikiart.org/images/edvard-munch/self-portrait-i-1896.jpg!Portrait.jpg",
+	"text":"i have cat",
+	"reactions":[],
+	"views":{"$numberInt":"0"},
+	"comments":[{"_id":{"$oid":"5e64f3b8d6d5b431885711c5"},"authorEmail":"gustav_k@gmail.com","authorName":"Gustav Klimt","authorNickname":"Gustav_K","time":"2020-04-08T03:49:00.000+09:00","authorAvatar":"https://uploads4.wikiart.org/images/gustav-klimt.jpg!Portrait.jpg","text":"congratulations"}]
+})
+
+db.post.insert({
+	"_id":{"$oid":"5e64f3b8d6d5b431885715c0"},
+	"authorEmail":"josef_a@gmail.com",
+	"authorName":"Josef Albers",
+	"authorNickname":"Josef_A",
+	"time":"2020-04-06T03:49:00.000+09:00",
+	"authorAvatar":"https://uploads4.wikiart.org/temp/cf0acabe-15ec-4ee2-8f12-f7c47929a28c.jpg",
+	"text":"hello all",
+	"reactions":[],
+	"views":{"$numberInt":"0"},
+	"comments":[{"_id":{"$oid":"5e64f3b8d6d5b431885711c5"},"authorEmail":"gustav_k@gmail.com","authorName":"Gustav Klimt","authorNickname":"Gustav_K","time":"2020-04-06T03:50:00.000+09:00","authorAvatar":"https://uploads4.wikiart.org/images/gustav-klimt.jpg!Portrait.jpg","text":"hello"}]
+})
+
+
+db.post.insert({
+	"_id":{"$oid":"5e64f3b8d6d5b431885751c0"},
+	"authorEmail":"josef_a@gmail.com",
+	"authorName":"Josef Albers",
+	"authorNickname":"Josef_A",
+	"time":"2020-04-09T03:43:00.000+09:00",
+	"authorAvatar":"https://uploads4.wikiart.org/temp/cf0acabe-15ec-4ee2-8f12-f7c47929a28c.jpg",
+	"text":"i need new friend",
+	"reactions":[],
+	"views":{"$numberInt":"0"},
+	"comments":[{"_id":{"$oid":"5e64f3b8d6d5b431885711c5"},"authorEmail":"gustav_k@gmail.com","authorName":"Gustav Klimt","authorNickname":"Gustav_K","time":"2020-04-06T03:50:00.000+09:00","authorAvatar":"https://uploads4.wikiart.org/images/gustav-klimt.jpg!Portrait.jpg","text":"i can be your friend"}]
+})
