@@ -1,0 +1,195 @@
+﻿
+@model PortfolioViewModel
+@{
+    ViewData["Title"] = "Profile";
+}
+<style>
+    table.blueTable {
+        border: 1px solid #1C6EA4;
+        background-color: #EEEEEE;
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+    }
+
+        table.blueTable td, table.blueTable th {
+            border: 1px solid #AAAAAA;
+            padding: 3px 2px;
+        }
+
+        table.blueTable tbody td {
+            font-size: 13px;
+        }
+
+        table.blueTable tr:nth-child(even) {
+            background: #D0E4F5;
+        }
+
+        table.blueTable thead {
+            background: #1C6EA4;
+            background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+            background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+            background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+            border-bottom: 2px solid #444444;
+        }
+
+            table.blueTable thead th {
+                font-size: 15px;
+                font-weight: bold;
+                color: #FFFFFF;
+                border-left: 2px solid #D0E4F5;
+            }
+
+                table.blueTable thead th:first-child {
+                    border-left: none;
+                }
+
+        table.blueTable tfoot {
+            font-size: 14px;
+            font-weight: bold;
+            color: #FFFFFF;
+            background: #D0E4F5;
+            background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+            background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+            background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+            border-top: 2px solid #444444;
+        }
+
+            table.blueTable tfoot td {
+                font-size: 14px;
+            }
+
+            table.blueTable tfoot .links {
+                text-align: right;
+            }
+
+                table.blueTable tfoot .links a {
+                    display: inline-block;
+                    background: #1C6EA4;
+                    color: #FFFFFF;
+                    padding: 2px 8px;
+                    border-radius: 5px;
+                }
+</style>
+<script>
+    function update() {
+        var el = document.getElementById("update-text");
+        el.textContent = "Updated!";
+    }
+</script>
+<img style="align-self: center" width="100" height="200" src="@Model.Avatar" class="mx-auto img-fluid img-circle d-block" alt="avatar">
+<div class="container">
+    <div class="row">
+        <div class="col-8 order-2">
+            <table class="blueTable">
+                <thead>
+                    <tr>
+                        <th>Account Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name: @Model.Name</td>
+                    </tr>
+                    <tr>
+                        <td>nickname: @Model.Nickname</td>
+                    </tr>
+                    <tr>
+                        <td>Email: @Model.Email</td>
+                    </tr>
+                </tbody>
+            </table>
+                @if (Model.IsAuthorized)
+                {
+                        <form id="profile" asp-action="UpdateProfile" asp-controller="Account" asp-anti-forgery="true">
+                            <div class="validation" asp-validation-summary="ModelOnly" />
+                            <div class="form-group row">
+                                <label class="col-3 col-form-label form-control-label">Email</label>
+                                <div class="col-9">
+                                    <input asp-for="Email" type="text" readonly class="form-control-plaintext" id="inputEmail" placeholder="Input nickname" value="@Model.Email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-3 col-form-label form-control-label">Name</label>
+                                <div class="col-9">
+                                    <input asp-for="Name" type="text" class="form-control" id="inputName" placeholder="Name" value=@Model.Name>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-3 col-form-label form-control-label">nickname</label>
+                                <div class="col-9">
+                                    <input asp-for="Nickname" type="text" class="form-control" id="inputnickname" placeholder="Input nickname" value="@Model.Nickname">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-3 col-form-label form-control-label">Image Source</label>
+                                <div class="col-9">
+                                    <input asp-for="Avatar" type="text" class="form-control" id="inputImageSource" placeholder="Input Image Source" value="@Model.Avatar">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-3 col-form-label form-control-label">Password</label>
+                                <div class="col-9">
+                                    <input asp-for="Password" type="text" class="form-control" id="inputNewPassword" placeholder="Input New Password">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-3 col-form-label form-control-label">Confirm password</label>
+                                <div class="col-9">
+                                    <input asp-for="ConfirmPassword" type="text" class="form-control" id="inputNewPassword" placeholder="Input New Password">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div>
+                                    <input type="submit" onclick="update()" class="btn btn-primary" value="Save Changes">
+                                </div>
+                            </div>
+                        </form>
+                        <div>
+                            <p id="update-text" class="text-success"></p>
+                        </div>
+                }
+            </div>
+        </div>
+        <div class="col-12 order-12">
+            <div>
+                @if (Model.Followers.Count != 0)
+                {
+                    <h3 style="background-color: rgba(255,255,255,0.2) !important;">Friends</h3>
+                }
+            </div>
+            <ul class="list-group list-group-lg list-group-flush list my--4">
+                @foreach (var user in Model.Followers)
+                {
+                    <li style="background-color: rgba(255,255,255,0.2) !important;" class="list-group-item mb-1 px-0">
+                        <div class="row align-items-center">
+                            <div class="col-auto">
+                                <span class="avatar avatar-lg">
+                                    <img class="img-fluid avatar-img rounded-circle profile-avatar" src="@user.Avatar" alt="">
+                                </span>
+                            </div>
+                            <div class="col ml--2">
+                                <h4 class="card-title mb-1">
+                                    <a asp-action="ProfileByEmail" asp-controller="Account" asp-route-authorEmail="@user.Email">@(user.Name + " " + user.Nickname)</a>
+                                </h4>
+                                <p class="card-text small text-muted mb-1">
+                                    @user.Email
+                                </p>
+                            </div>
+                            @if (Model.Email == User.Identity.Name)
+                            {
+                                <div class="col-auto mr-2">
+                                    <form asp-action="RemoveFriend" asp-controller="Artists" asp-route-userEmail="@user.Email">
+                                        <button type="submit" class="btn btn-sm btn-primary d-none d-md-inline-block">
+                                            Remove
+                                        </button>
+                                    </form>
+                                </div>
+                            }
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
