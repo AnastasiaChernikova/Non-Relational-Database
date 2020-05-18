@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kunst.BusinessLogicLayer", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kunst", "Kunst\Kunst.csproj", "{E642BEEB-0B39-4A80-8CB5-7A7691367318}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kunst.Neo4j", "Kunst.Neo4JTask\Kunst.Neo4j\Kunst.Neo4j.csproj", "{E3523A48-342A-4C1F-88A9-BD621F09B48B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E642BEEB-0B39-4A80-8CB5-7A7691367318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E642BEEB-0B39-4A80-8CB5-7A7691367318}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E642BEEB-0B39-4A80-8CB5-7A7691367318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3523A48-342A-4C1F-88A9-BD621F09B48B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3523A48-342A-4C1F-88A9-BD621F09B48B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3523A48-342A-4C1F-88A9-BD621F09B48B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3523A48-342A-4C1F-88A9-BD621F09B48B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
