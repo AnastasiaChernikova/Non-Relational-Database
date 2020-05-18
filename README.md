@@ -6,7 +6,7 @@
 > -  **Link:** <https://github.com/AnastasiaChernikova/Non-Relational-Database>
 
 > -  **Database:** [MongoDB](https://www.mongodb.com/) 
-> -  **Database dump:** <...>
+> -  **Database dump:** <https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/damp.txt>
 
 > -  **About:** 
 My social network is called Kunst.
