@@ -3,7 +3,7 @@
 > -  ### Social Network
 > -  **Deadline:** Apr 13, 2020
 > -  **Uploading date:** Apr 18, 2020
-> -  **Link:** <...>
+> -  **Link:** <https://github.com/AnastasiaChernikova/Non-Relational-Database>
 
 > -  **Database:** [MongoDB](https://www.mongodb.com/) 
 > -  **Database dump:** <...>
@@ -38,9 +38,9 @@ ASP.NET , AutoMapper , Bootstrap , MVC pattern , NLog
 - change design
 
 > - **Project structure:**
-- Kunst.DataAccessLayer: here you can find Connection Manager, Entities and View Models
-- Kunst.BusinessLogicLayer: here you can find Interfaces and Services
-- Kunst: here you can find Controllers, Views and StartUp file
+- [Kunst.DataAccessLayer](https://github.com/AnastasiaChernikova/Non-Relational-Database/tree/master/Kunst.DataAccessLayer): here you can find Connection Manager, Entities and View Models
+- [Kunst.BusinessLogicLayer](https://github.com/AnastasiaChernikova/Non-Relational-Database/tree/master/Kunst.BusinessLogicLayer): here you can find Interfaces and Services
+- [Kunst](https://github.com/AnastasiaChernikova/Non-Relational-Database/tree/master/Kunst): here you can find Controllers, Views and StartUp file
 
 ## Task 2
 > -  ### Social Network
