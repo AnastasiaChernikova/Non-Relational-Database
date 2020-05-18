@@ -46,16 +46,15 @@ ASP.NET , AutoMapper , Bootstrap , MVC pattern , NLog
 > -  ### Social Network
 > -  **Deadline:** Apr 18, 2020
 > -  **Uploading date:** Apr 18, 2020
-> -  **Link:** <...>
+> -  **Link:** <>
 
 > -  **Database:** [Neo4j](https://neo4j.com/) 
-> -  **Database dump:** <...>
 
 > -  **About:** 
-In this task I need to work with the database Neo4j. I should create adding leyers over my project (Task 1) and show for my artist common friends.
+In this task I need to work with the database Neo4j. I should create adding layers over my project (Task 1) and show for my artist common friends. In my generic repository with a Neo4j implementation built on Neo4jClient. Here you can easily build up generic repositories that can be used for CRUD operations on application data model. The library is built on the Neo4jClient which supports the Cypher syntax and building queries using Linq expressions.
 
-> - **Main files:** I add [Social.cs](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/Social.cs),  [NetworkManagment.cs](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/NetworkManagment.cs) and [FraudDetaction.cs](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/FraudDetaction.cs) files which i try to understand and find [tutorial Test-Drive Neo4j with Cypher](https://neo4j.com/developer/#cs-1). Also I create some Neo4j queries for Artist - [ArtistNeo4j.txt](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/ArtistNeo4j.txt)
- > - **My Graph model for Artists**
- ![image](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/graphArtist.jpg)
- > - **Artists and their Following**
- ![image](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/tableOfFollowing.jpg)
+> - **Test files:** I add [Social.cs](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/Social.cs),  [NetworkManagment.cs](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/NetworkManagment.cs) and [FraudDetaction.cs](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/FraudDetaction.cs) files which i try to understand and find [tutorial Test-Drive Neo4j with Cypher](https://neo4j.com/developer/#cs-1). Also I create some Neo4j queries for Artist - [ArtistNeo4j.txt](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/ArtistNeo4j.txt)
+**My Graph model for Artists**
+![image](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/graphArtist.jpg)
+**Artists and their Following**
+![image](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/tableOfFollowing.jpg)
