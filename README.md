@@ -46,7 +46,7 @@ ASP.NET , AutoMapper , Bootstrap , MVC pattern , NLog
 > -  ### Social Network
 > -  **Deadline:** Apr 18, 2020
 > -  **Uploading date:** Apr 18, 2020
-> -  **Link:** <>
+> -  **Link:** <https://github.com/AnastasiaChernikova/Non-Relational-Database/tree/master/Kunst.Neo4JTask>
 
 > -  **Database:** [Neo4j](https://neo4j.com/) 
 
