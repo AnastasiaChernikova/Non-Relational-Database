@@ -26,9 +26,8 @@ ASP.NET , AutoMapper , Bootstrap , MVC pattern , NLog
 > - **Features:**
 - you can edit information about yourself
 - you can add you can add an icon which representing you
-- your personal information in safe, bacause your password is hashed
 - you can see top of "the best artist" 
-- you can listen "the best song of week"
+- you can listen "the best song today"
 - you can also get fun and play game
 
 > - **Future plans and intentions:**
