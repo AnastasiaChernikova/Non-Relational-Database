@@ -3,10 +3,10 @@
 > -  ### Social Network
 > -  **Deadline:** Apr 13, 2020
 > -  **Uploading date:** Apr 18, 2020
-> -  **Link:** <...>
+> -  **Link:** <https://github.com/AnastasiaChernikova/Non-Relational-Database>
 
 > -  **Database:** [MongoDB](https://www.mongodb.com/) 
-> -  **Database dump:** <...>
+> -  **Database dump:** <https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/damp.txt>
 
 > -  **About:** 
 My social network is called Kunst.
@@ -26,9 +26,8 @@ ASP.NET , AutoMapper , Bootstrap , MVC pattern , NLog
 > - **Features:**
 - you can edit information about yourself
 - you can add you can add an icon which representing you
-- your personal information in safe, bacause your password is hashed
 - you can see top of "the best artist" 
-- you can listen "the best song of week"
+- you can listen "the best song today"
 - you can also get fun and play game
 
 > - **Future plans and intentions:**
@@ -39,14 +38,14 @@ ASP.NET , AutoMapper , Bootstrap , MVC pattern , NLog
 - change design
 
 > - **Project structure:**
-- Kunst.DataAccessLayer: here you can find Connection Manager, Entities and View Models
-- Kunst.BusinessLogicLayer: here you can find Interfaces and Services
-- Kunst: here you can find Controllers, Views and StartUp file
+- [Kunst.DataAccessLayer](https://github.com/AnastasiaChernikova/Non-Relational-Database/tree/master/Kunst.DataAccessLayer): here you can find Connection Manager, Entities and View Models
+- [Kunst.BusinessLogicLayer](https://github.com/AnastasiaChernikova/Non-Relational-Database/tree/master/Kunst.BusinessLogicLayer): here you can find Interfaces and Services
+- [Kunst](https://github.com/AnastasiaChernikova/Non-Relational-Database/tree/master/Kunst): here you can find Controllers, Views and StartUp file
 
 ## Task 2
 > -  ### Social Network
 > -  **Deadline:** Apr 18, 2020
-> -  **Uploading date:** 
+> -  **Uploading date:** Apr 18, 2020
 > -  **Link:** <...>
 
 > -  **Database:** [Neo4j](https://neo4j.com/) 
@@ -55,3 +54,8 @@ ASP.NET , AutoMapper , Bootstrap , MVC pattern , NLog
 > -  **About:** 
 In this task I need to work with the database Neo4j. I should create adding leyers over my project (Task 1) and show for my artist common friends.
 
+> - **Main files:** I add [Social.cs](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/Social.cs),  [NetworkManagment.cs](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/NetworkManagment.cs) and [FraudDetaction.cs](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/FraudDetaction.cs) files which i try to understand and find [tutorial Test-Drive Neo4j with Cypher](https://neo4j.com/developer/#cs-1). Also I create some Neo4j queries for Artist - [ArtistNeo4j.txt](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/ArtistNeo4j.txt)
+ > - **My Graph model for Artists**
+ ![image](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/graphArtist.jpg)
+ > - **Artists and their Following**
+ ![image](https://github.com/AnastasiaChernikova/Non-Relational-Database/blob/master/tableOfFollowing.jpg)

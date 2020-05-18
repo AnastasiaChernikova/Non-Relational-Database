@@ -1,0 +1,35 @@
+CREATE (nEdvard:Artist {id:'Edvard', name:'Node Edvard'})
+CREATE (nJosef:Artist {id:'Josef', name:'Node Josef'})
+CREATE (nVincent:Artist {id:'Vincent', name:'Node Vincent'})
+CREATE (nEgon:Artist {id:'Egon', name:'Node Egon'})
+CREATE (nGustav:Artist {id:'Gustav', name:'Node Gustav'})
+CREATE (nLeonardo:Artist {id:'Leonardo', name:'Node Leonardo'})
+CREATE (nClaude:Artist {id:'Claude', name:'Node Claude'})
+
+CREATE (nEdvard)-[:FOLLOWS]->(nJosef)
+CREATE (nEdvard)-[:FOLLOWS]->(nVincent)
+CREATE (nEdvard)-[:FOLLOWS]->(nEgon)
+CREATE (nJosef)-[:FOLLOWS]->(nEdvard)
+CREATE (nJosef)-[:FOLLOWS]->(nVincent)
+CREATE (nJosef)-[:FOLLOWS]->(nEgon)
+CREATE (nVincent)-[:FOLLOWS]->(nEdvard)
+CREATE (nVincent)-[:FOLLOWS]->(nJosef)
+CREATE (nVincent)-[:FOLLOWS]->(nEgon)
+CREATE (nEgon)-[:FOLLOWS]->(nEdvard)
+CREATE (nEgon)-[:FOLLOWS]->(nJosef)
+CREATE (nEgon)-[:FOLLOWS]->(nVincent)
+CREATE (nGustav)-[:FOLLOWS]->(nLeonardo)
+CREATE (nGustav)-[:FOLLOWS]->(nClaude)
+CREATE (nLeonardo)-[:FOLLOWS]->(nGustav)
+CREATE (nLeonardo)-[:FOLLOWS]->(nClaude)
+CREATE (nClaude)-[:FOLLOWS]->(nGustav)
+CREATE (nClaude)-[:FOLLOWS]->(nLeonardo)
+CREATE (nVincent)-[:FOLLOWS]->(nGustav)
+CREATE (nGustav)-[:FOLLOWS]->(nVincent)
+
+MATCH (follower:Artist)-[:FOLLOWS]->(targetArtist:Artist)-[:FOLLOWS]->(following:Artist)
+RETURN targetArtist AS Artist, COUNT(distinct follower) AS Followers, COUNT(distinct following) AS Following
+
+
+MATCH (p:Artist)-[f:FOLLOWS]->(p1:Artist)
+RETURN p.id AS Artist, COLLECT(p1.id) AS Following
